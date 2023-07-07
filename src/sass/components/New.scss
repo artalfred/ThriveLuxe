@@ -55,6 +55,10 @@
       max-width: 15rem;
     }
   }
+
+  &__item {
+    transition: all 0.3s ease-in-out;
+  }
 }
 
 .margin-right {
@@ -66,5 +70,37 @@
 
   @media (max-width: 400px) {
     margin-right: 1rem;
+  }
+}
+
+.featured {
+  height: 44rem;
+
+  &__items {
+    display: flex;
+    overflow-x: scroll;
+    margin-left: 4rem;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @media (max-width: 767px) {
+      margin-left: 1rem;
+    }
+  }
+
+  &__btn {
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: #e8e6e6 !important;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .section--3--button {
+    display: none !important;
   }
 }

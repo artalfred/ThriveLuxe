@@ -4,7 +4,6 @@ import Product from "./components/Pages/Product";
 import Cart from "./components/Cart";
 import { useEffect, useState } from "react";
 import NewArrivals from "./components/Pages/NewArrivals";
-import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Latest from "./components/Pages/Latest";
 import Men from "./components/Pages/Men";

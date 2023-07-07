@@ -1,16 +1,15 @@
 import React from "react";
 import Hero from "./components/Hero";
-import New from "./components/New";
-import Footer from "./components/Footer";
 import Blog from "./components/Blog";
 import Header from "./components/Header";
+import Feature from "./components/Featured";
 
 function Main({ totalItems }) {
   return (
     <div>
       <Header totalItems={totalItems} home="fw-semibold" />
       <Hero />
-      <New />
+      <Feature />
       <Blog />
     </div>
   );
