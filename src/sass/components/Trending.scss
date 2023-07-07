@@ -1,0 +1,7 @@
+.trending {
+  margin-top: 6rem;
+
+  @media (max-width: 400px) {
+    margin-top: 0;
+  }
+}

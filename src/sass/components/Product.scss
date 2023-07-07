@@ -1,0 +1,114 @@
+.product {
+  padding: 0 8rem;
+
+  @media (max-width: 1199.98px) {
+    padding: 0 0rem;
+  }
+
+  &__sizes {
+    height: 2.8rem;
+    padding: 0rem 2rem;
+    border: 1px solid #c1c0c0 !important;
+    background: transparent;
+  }
+
+  &__title {
+    margin-top: 1rem;
+
+    @media (max-width: 575.98px) {
+      margin-top: 0rem;
+    }
+  }
+
+  &__details {
+    margin-left: 1.6rem;
+
+    @media (max-width: 991.98px) {
+      margin-top: 2rem;
+      margin-left: 0rem;
+    }
+
+    @media (max-width: 575.98px) {
+      margin-top: 1rem;
+      margin-left: 0rem;
+    }
+  }
+
+  &__cards {
+    @media (max-width: 575.98px) {
+    }
+  }
+
+  &__image {
+    @media (max-width: 575.98px) {
+      // display: flex !important;
+    }
+  }
+}
+
+.product__active {
+  opacity: 1;
+  outline: 2.6px solid #000 !important;
+}
+
+.product__notActive {
+  opacity: 0.8;
+  transition: all 0.2s ease;
+}
+
+.select__active {
+  border: 2px solid #000 !important;
+}
+
+.select__notActive {
+  opacity: 0.2;
+}
+
+.star {
+  display: flex;
+
+  ion-icon {
+    color: #fca211;
+  }
+}
+
+.arrow {
+  ion-icon {
+    color: #fff;
+  }
+}
+
+.accordion-button {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+// NEW ARRIVALS
+.newArrivals {
+  padding: 0 6rem !important;
+  opacity: 0;
+  animation: load 1s 0.2s forwards;
+  transition: all 0.3s ease;
+
+  @keyframes load {
+    10% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    padding: 0 4rem !important;
+  }
+
+  @media (max-width: 767.98px) {
+    padding: 0 2rem !important;
+  }
+
+  @media (max-width: 575.98px) {
+    padding: 0 0rem !important;
+  }
+}

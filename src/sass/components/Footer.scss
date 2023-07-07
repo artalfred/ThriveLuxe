@@ -1,0 +1,44 @@
+.footer {
+  margin-top: 6rem;
+  background: #000;
+
+  @media (max-width: 567.98px) {
+    padding: 1rem !important;
+  }
+
+  &__signUp {
+    @media (max-width: 991.98px) {
+      border: 0 !important;
+    }
+  }
+
+  &__div {
+    @media (max-width: 767.98px) {
+      display: grid !important;
+      justify-content: center !important;
+      gap: 1rem;
+    }
+  }
+
+  &__row_1 {
+    @media (max-width: 767.98px) {
+      order: 2;
+    }
+  }
+
+  &__row_2 {
+    display: flex;
+    justify-content: center !important;
+    @media (max-width: 767.98px) {
+      order: 1;
+    }
+  }
+
+  &__row_3 {
+    @media (max-width: 767.98px) {
+      order: 3;
+      justify-content: center;
+      display: none !important;
+    }
+  }
+}

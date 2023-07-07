@@ -1,0 +1,70 @@
+.cart {
+  padding: 0 8rem;
+
+  @media (max-width: 1199.98px) {
+    padding: 0 4rem;
+  }
+
+  @media (max-width: 991.98px) {
+    padding: 0 0rem;
+  }
+
+  &__items {
+    max-height: 27rem;
+
+    &::-webkit-scrollbar {
+      width: 0.2rem;
+      display: block;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #d2d2d2;
+      border-radius: 10px;
+    }
+  }
+
+  &__icon {
+    background-color: transparent;
+    border: none;
+  }
+
+  &__icon img {
+    height: 1.2rem;
+  }
+
+  &__checkout {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    padding: 2.2rem 1.8rem;
+  }
+
+  &__number {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+  }
+
+  &__discount {
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+.item__title {
+  @media (max-width: 400px) {
+    display: grid !important;
+    gap: 0rem !important;
+  }
+}
+
+.form-check-input:checked {
+  background-color: #fff !important;
+  border: 1.6px solid #000 !important;
+}
+
+.form-check-input:checked[type="radio"] {
+  --bs-form-check-bg-image: url("../../image/Icon/dot.png") !important;
+  background-size: 6.3px;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}

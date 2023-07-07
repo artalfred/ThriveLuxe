@@ -1,0 +1,104 @@
+.nav {
+  @media (max-width: 991.98px) {
+    top: 0 !important;
+  }
+
+  &__search {
+    height: 10rem !important;
+
+    @media (max-width: 991.98px) {
+      height: 4.7rem !important;
+    }
+  }
+}
+
+.header {
+  &__nav {
+    margin-top: 3rem;
+  }
+}
+
+.nav {
+  &__logo {
+    height: 2.4rem;
+    margin-left: -0.5rem;
+  }
+
+  &__searchBar {
+    @media (max-width: 991.98px) {
+      width: 100% !important;
+      position: static !important;
+      transform: none !important;
+    }
+  }
+
+  &__cancel {
+    @media (max-width: 991.98px) {
+      padding-left: 1rem !important;
+    }
+  }
+}
+
+.close ion-icon {
+  font-size: 1.8rem;
+}
+
+.offcanvas.offcanvas-end {
+  top: 0.5rem !important;
+  right: 0.5rem !important;
+  width: var(--bs-offcanvas-width);
+  border-left: var(--bs-offcanvas-border-width) solid
+    var(--bs-offcanvas-border-color);
+  transform: translateX(100%);
+  bottom: 0.5rem !important;
+
+  @media (max-width: 575.98px) {
+    width: 84% !important;
+  }
+
+  @media (max-width: 400px) {
+    width: 95% !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    right: 0 !important;
+  }
+}
+
+.sidebar__btn {
+  @media (max-width: 400px) {
+  }
+}
+
+.ads {
+  &__btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 30rem;
+
+    @media (max-width: 991.98px) {
+      position: static;
+      padding: 2rem 0rem 0rem 0rem !important;
+    }
+
+    @media (max-width: 575.98px) {
+      width: 100%;
+    }
+  }
+}
+
+.searchProducts {
+  opacity: 0;
+  animation: searchProduct 0.2s forwards;
+  transition: all 0.2s ease;
+}
+
+@keyframes searchProduct {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

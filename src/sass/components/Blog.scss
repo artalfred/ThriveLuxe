@@ -1,0 +1,19 @@
+.blog {
+  margin-top: 6rem;
+
+  @media (max-width: 567.98px) {
+    margin-top: 4rem;
+  }
+
+  &__row {
+    @media (max-width: 400px) {
+      margin-top: 1rem !important;
+    }
+  }
+
+  &__description {
+    @media (max-width: 991.98px) {
+      font-size: 14px !important;
+    }
+  }
+}
