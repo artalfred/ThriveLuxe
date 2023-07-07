@@ -5,6 +5,10 @@
     margin-top: 4rem;
   }
 
+  @media (max-width: 400px) {
+    margin-top: 0rem;
+  }
+
   &__row {
     @media (max-width: 400px) {
       margin-top: 1rem !important;

@@ -55,12 +55,12 @@ export default function Feature() {
               reloadDocument
               to={`/product/${item.url}=/${item.id}`}
               style={{ height: "54rem", padding: "0rem" }}
-              className={`text-decoration-none text-dark ${
+              className={`text-decoration-none text-dark featured__cards ${
                 item.id === 7 ? "margin-right" : ""
               }`}
             >
-              <div className="" style={{ width: "20rem" }}>
-                <div style={{ height: "30rem" }}>
+              <div className="featured__images" style={{ width: "20rem" }}>
+                <div className="featured__img" style={{ height: "30rem" }}>
                   <img
                     src={item.image}
                     alt="img-1"
