@@ -8,10 +8,12 @@ import { useEffect } from "react";
 export default function Searched({ totalItems }) {
   const params = useParams();
 
+  const search = params.search.toLocaleLowerCase();
+
   const filteredProducts = NewApi.filter((item) => {
     if (
-      item.category?.toLocaleLowerCase() === params.search ||
-      item.name?.toLocaleLowerCase().includes(params.search)
+      item.category?.toLocaleLowerCase() === search ||
+      item.name?.toLocaleLowerCase().includes(search)
     ) {
       return true;
     } else {
@@ -26,7 +28,7 @@ export default function Searched({ totalItems }) {
       <div className="container-xxl mt-5">
         <div className="row g-3 newArrivals" style={{ marginTop: "2rem" }}>
           <p className="f-sm border-bottom pb-5">
-            Home / Search {results} results found for "{params.search}"
+            Home / Search {results} results found for "{search}"
           </p>
           <div>
             <h2 className="mt-3" style={{ fontWeight: "900" }}>
@@ -36,7 +38,7 @@ export default function Searched({ totalItems }) {
             {results === 0 ? (
               <div>
                 <p className="f-sm mt-4">
-                  Your search for "{params.search}" did not yield any results.
+                  Your search for "{search}" did not yield any results.
                 </p>
               </div>
             ) : (
