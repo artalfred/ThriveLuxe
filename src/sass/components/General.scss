@@ -26,6 +26,11 @@ input {
   color: #000 !important;
 }
 
+.active {
+  color: #000;
+  font-weight: 600;
+}
+
 .pay-btn {
   border: 2px solid #000;
   padding: 0.7rem 2.2rem;

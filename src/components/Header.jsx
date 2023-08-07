@@ -1,18 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 import logo from "../image/logo.png";
-import heart from "../image/Icon/heart.png";
 import search from "../image/Icon/search.png";
-import user from "../image/Icon/user.png";
-import telephone from "../image/Icon/telephone.png";
 import cart from "../image/Icon/cart.png";
-import close from "../image/Icon/close.svg";
 import hamburger from "../image/Icon/hamburger.png";
 import MainButton from "./Reusable/MainBtn";
 
-function Header({ totalItems, home, newArrival, latest, men, kid, women }) {
+function Header({ totalItems }) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const navigate = useNavigate();
   const [input, setInput] = useState("");
@@ -75,48 +71,48 @@ function Header({ totalItems, home, newArrival, latest, men, kid, women }) {
           </div>
           {/* NAVIGATION LINKS */}
           <div className="d-flex gap-5 justify-content-center align-items-center position-absolute top-50 start-50 translate-middle hidden_991">
-            <Link
+            <NavLink
               to="/"
-              className={`text-decoration-none text-dark f-xsm ${home}`}
+              className={`text-decoration-none text-dark f-xsm`}
               reloadDocument
             >
               HOME
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/newArrival"
-              className={`text-decoration-none text-dark f-xsm ${newArrival}`}
+              className={`text-decoration-none text-dark f-xsm`}
               reloadDocument
             >
               NEW ARRIVAL
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/latest"
-              className={`text-decoration-none text-dark f-xsm ${latest}`}
+              className={`text-decoration-none text-dark f-xsm`}
               reloadDocument
             >
               LATEST
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/men"
-              className={`text-decoration-none text-dark f-xsm ${men}`}
+              className={`text-decoration-none text-dark f-xsm`}
               reloadDocument
             >
               MEN
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/kid"
-              className={`text-decoration-none text-dark f-xsm ${kid}`}
+              className={`text-decoration-none text-dark f-xsm`}
               reloadDocument
             >
               KID
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/women"
-              className={`text-decoration-none text-dark f-xsm ${women}`}
+              className={`text-decoration-none text-dark f-xsm`}
               reloadDocument
             >
               WOMEN
-            </Link>
+            </NavLink>
           </div>
 
           <div className="d-flex gap-2 align-items-center">

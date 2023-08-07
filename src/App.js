@@ -84,6 +84,7 @@ function App() {
               totalPrice={total}
               totalItems={totals}
               onQuantityChange={handleQuantityChange}
+              setItem={setItems}
             />
           }
         ></Route>

@@ -1,10 +1,6 @@
 import Footer from "./Footer";
 import Header from "./Header";
 
-import paypal from "../image/Card/paypal.png";
-import visa from "../image/Card/visa.png";
-import american from "../image/Card/american.png";
-import gcash from "../image/Card/gcash.png";
 import MainButton from "./Reusable/MainBtn";
 import Item from "./Reusable/Item";
 import { useState } from "react";
@@ -15,7 +11,27 @@ export default function Cart({
   totalPrice,
   totalItems,
   onQuantityChange,
+  setItem,
 }) {
+  const [checkout, setCheckout] = useState(false);
+  const [checkoutWarning, setCheckoutWarning] = useState("");
+  const [checkoutBg, setCheckoutBg] = useState("");
+
+  function handleCheckout() {
+    setCheckout(true);
+
+    if (totalItems > 0) {
+      setCheckoutWarning(
+        "Thank you for your purchase. Your order has been successfully placed."
+      );
+      setCheckoutBg("bg-success");
+      setItem((items) => items.splice());
+    } else {
+      setCheckoutWarning("please make sure you have added items to your cart.");
+      setCheckoutBg("bg-danger");
+    }
+  }
+
   return (
     <div>
       <Header totalItems={totalItems} />
@@ -145,7 +161,10 @@ export default function Cart({
                     </div>
                   </div>
 
-                  <MainButton btnType="pay-btn f-sm w-100">
+                  <MainButton
+                    btnType="pay-btn f-sm w-100"
+                    onClick={handleCheckout}
+                  >
                     PAY {totalPrice}.00
                   </MainButton>
 
@@ -158,6 +177,24 @@ export default function Cart({
           </div>
         </div>
       </div>
+
+      {checkout && (
+        <div
+          className={`position-absolute top-50 start-50 translate-middle p-4 border bg-success rounded-1 border-0 ${checkoutBg}`}
+          style={{ width: "30rem" }}
+        >
+          <p className="text-center mb-0 text-light">{checkoutWarning}</p>
+
+          <div className="d-flex align-items-center justify-content-center">
+            <MainButton
+              btnType="bg-light py-2 px-4 f-sm border-0 rounded-1"
+              onClick={() => setCheckout(false)}
+            >
+              Ok
+            </MainButton>
+          </div>
+        </div>
+      )}
 
       <Footer />
     </div>

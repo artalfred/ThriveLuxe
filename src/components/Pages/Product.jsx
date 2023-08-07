@@ -40,6 +40,7 @@ export default function Product({
   const [clicked, setClicked] = useState("img1");
   const [img, setImg] = useState(NewApi[params.id].image);
   const [size, setSize] = useState("");
+  const [warning, setWarning] = useState("");
 
   function handleClicked(id) {
     setClicked(id);
@@ -71,6 +72,11 @@ export default function Product({
 
   function handleAdd(e) {
     e.preventDefault();
+
+    if (!size) {
+      setWarning("Please select a size.");
+      return null;
+    } else setWarning("");
 
     const newItem = {
       id: Date.now(),
@@ -173,7 +179,7 @@ export default function Product({
                   <div className="position-relative">
                     <img src={placeholder} class="card-img-top" alt="..." />
                     <div
-                      class="spinner-grow position-absolute top-50 start-50 translate-middle"
+                      className="spinner-grow position-absolute top-50 start-50 translate-middle"
                       role="status"
                     ></div>
                   </div>
@@ -238,6 +244,12 @@ export default function Product({
                   );
                 })}
               </div>
+
+              {!size ? (
+                <p className="f-sm text-danger mt-4 fw-semibold">{warning}</p>
+              ) : (
+                ""
+              )}
             </div>
 
             {/* ADD TO BAG BUTTON */}
@@ -257,13 +269,15 @@ export default function Product({
                     </span>
                     Premium Quality
                   </p>
-                  <MainButton btnType="gray-Button" onClick={handleAdd}>
-                    ADD TO BAG
-                  </MainButton>
+                  <div className="d-flex align-items-center justify-content-between gap-3">
+                    <MainButton btnType="gray-Button w-100" onClick={handleAdd}>
+                      ADD TO BAG
+                    </MainButton>
+                    <span className="icons mt-4">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </span>
+                  </div>
                 </div>
-                <span className="icons mt-4">
-                  <ion-icon name="heart-outline"></ion-icon>
-                </span>
               </div>
 
               <div className="accordion mt-4" id="accordionExample">

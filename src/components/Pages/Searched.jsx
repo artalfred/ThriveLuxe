@@ -3,7 +3,6 @@ import Header from "../Header";
 import NewApi from "../../Api";
 import { Link } from "react-router-dom";
 import placeholder from "../../image/placeholder.png";
-import { useEffect } from "react";
 
 export default function Searched({ totalItems }) {
   const params = useParams();
