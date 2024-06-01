@@ -196,7 +196,6 @@ export default function Cart({
         </div>
       )}
 
-      <Footer />
     </div>
   );
 }
